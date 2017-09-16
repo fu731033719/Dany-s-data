@@ -9,9 +9,7 @@ Vue.component('show', {
   template:`
   <button>显示余额</button>
   `,
-  methods:{
-    
-  },
+  methods:{},
 })
 let app = new Vue({
   el:'#app',
