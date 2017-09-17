@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>1.15</title>
+  <style>
+  .panel{
+    max-width: 300px;
+    border: 1px solid #999;
+    margin-bottom:15px; 
+  }
+  .panel > *{
+    padding: 15px;
+  }
+  .panel .title{
+    border-bottom: 1px solid #999;
+  }
+  .panel .content{
+    border-bottom: 1px solid #999;
+  }
+  </style>
+</head>
+<body>  
+<div id="app">
+  <pannel>
+    <div slot="title">1</div>
+    <div slot="content">2</div>
+    <div slot="footer">3</div>
+  </pannel>
+  <pannel>
+    <div slot="title">aaa</div>
+    <div slot="content">bbb</div>
+    <div slot="footer">ccc</div>
+  </pannel>
+  <pannel>
+    <div slot="title">aaa</div>
+    <div slot="content">bbb</div>
+  </pannel>
+</div>
+<template id='template'>
+  <div class="panel">
+    <div class="title">
+      <slot name="title">title</slot>
+    </div>
+    <div class="content">
+      <slot name="content">content</slot>
+    </div>
+    <div class="footer">
+      <slot name="footer">more</slot>
+    </div>
+  </div>
+</template>  
+<script src="..\Vue\vue.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
